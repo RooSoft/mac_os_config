@@ -1,1 +1,4 @@
-export PS1="\n\[\e[32;1m\](\[\e[37;1m\]\u\[\e[32;1m\])-(\[\e[37;1m\]jobs:\j\[\e[32;1m\])-(\[\e[37;1m\]\w\[\e[32;1m\])\n(\[\[\e[37;1m\]! \!\[\e[32;1m\])-> \[\e[0m\]"
+# Prompt
+
+export PS1="\j \# $(tput setaf 4)\t $(tput setaf 3)\w$(tput setaf 2) \\$ $(tput sgr0)"
+export PS2="&gt; "
