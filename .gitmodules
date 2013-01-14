@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/tComment"]
 	path = .vim/bundle/tComment
 	url = git://github.com/vim-scripts/tComment.git
+[submodule ".vim/bundle/rubycomplete.vim"]
+	path = .vim/bundle/rubycomplete.vim
+	url = git://github.com/vim-scripts/rubycomplete.vim.git
