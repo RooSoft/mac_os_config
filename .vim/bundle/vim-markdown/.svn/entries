@@ -1,37 +1,0 @@
-10
-
-dir
-386
-svn+ssh://96.23.222.209/var/svn/repository/RooSoft/.vim/bundle/vim-markdown
-svn+ssh://96.23.222.209/var/svn/repository/RooSoft
-
-
-
-2010-10-22T17:54:36.121391Z
-386
-roo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a6a337c1-9b00-a945-96ab-7ff96e6345ec
-
-ftdetect
-dir
-
-syntax
-dir
-
-ftplugin
-dir
-
