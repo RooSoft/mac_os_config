@@ -43,6 +43,6 @@
 [submodule ".vim/bundle/vim-rooter"]
 	path = .vim/bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
-[submodule ".vim/bundule/vim-markdown"]
-	path = .vim/bundule/vim-markdown
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
