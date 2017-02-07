@@ -2,8 +2,19 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 set nocompatible                  " Must come first because it changes other options.
+filetype off
 
-silent! call pathogen#runtime_append_all_bundles()
+"silent! call pathogen#runtime_append_all_bundles()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'moll/vim-node'
+Plugin 'vim-scripts/tComment'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()            " required
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -14,6 +25,7 @@ set tabstop=4
 set shiftwidth=4
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 set t_RV=			  " pour supprimer les \x80\xFD5 dans vimgolf
 
