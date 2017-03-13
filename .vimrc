@@ -10,9 +10,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'isRuslan/vim-es6'
 Plugin 'moll/vim-node'
 Plugin 'vim-scripts/tComment'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()            " required
 
@@ -26,6 +31,7 @@ set shiftwidth=4
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType json setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 set t_RV=			  " pour supprimer les \x80\xFD5 dans vimgolf
 
@@ -59,6 +65,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+set clipboard=unnamed
+
 " UNCOMMENT TO USE
 "set tabstop=2                    " Global tab width.
 "set shiftwidth=2                 " And again, related.
@@ -85,6 +93,8 @@ map <leader>tm :tabmove
 map N Nzz
 map n nzz
 map , :b#<cr>
+
+nmap <CR> o<Esc>k
 
 " Uncomment to use Jamis Buck's file opening plugin
 " map <Leader>p :FuzzyFinderTextMate<Enter>
