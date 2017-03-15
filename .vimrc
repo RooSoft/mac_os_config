@@ -18,6 +18,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mileszs/ack.vim'
+Plugin 'mkitt/tabline.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'powerline/powerline'
 
 call vundle#end()            " required
 
@@ -67,11 +72,6 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set clipboard=unnamed
 
-" UNCOMMENT TO USE
-"set tabstop=2                    " Global tab width.
-"set shiftwidth=2                 " And again, related.
-"set expandtab                    " Use spaces instead of tabs
-
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -95,16 +95,6 @@ map n nzz
 map , :b#<cr>
 
 nmap <CR> o<Esc>k
-
-" Uncomment to use Jamis Buck's file opening plugin
-" map <Leader>p :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
@@ -134,3 +124,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
+
+
+let g:buffergator_display_regime = "bufname"
+let g:buffergator_vsplit_size = 60
+

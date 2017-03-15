@@ -19,3 +19,5 @@ export NVM_DIR="/Users/marclacoursiere/.nvm"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 	. $(brew --prefix)/etc/bash_completion
 fi
+
+nvm use 7.7.2
