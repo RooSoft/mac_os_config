@@ -23,8 +23,13 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'powerline/powerline'
+Plugin 'heavenshell/vim-jsdoc'
 
 call vundle#end()            " required
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules$'
+  \ }
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -59,7 +64,7 @@ set ruler                         " Show cursor position.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set wrap                          " Turn on line wrapping.
+set nowrap                        " Turn off line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
