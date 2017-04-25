@@ -24,12 +24,27 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'powerline/powerline'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()            " required
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules$'
   \ }
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['ruby', 'javascript'],
+                            \ 'passive_filetypes': [] }
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') !=# '' ? ['eslint'] : []
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.

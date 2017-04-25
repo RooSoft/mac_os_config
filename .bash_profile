@@ -20,4 +20,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 	. $(brew --prefix)/etc/bash_completion
 fi
 
-nvm use 7.7.2
+# path
+PATH=$PATH:~/.bin
+
+nvm use 7.7.1
