@@ -1,3 +1,1 @@
-*.swp
-bundle
-.eslint.json
+.config/.gitignore

@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/marclacoursiere/work/bookenda/git/ds-pubsubdistributionagent/config/initializers'
-let g:netrw_dirhist_2='/Users/marclacoursiere/work/bookenda/git/ds-pubsublistener/config/parameters'
-let g:netrw_dirhist_3='/Users/marclacoursiere/work/bookenda/git/ms-authenticationservice/publicSchemas'
-let g:netrw_dirhist_4='/Users/marclacoursiere/work/bookenda/git/ms-pubsubservice/test/models'
