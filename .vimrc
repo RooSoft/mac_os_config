@@ -10,7 +10,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'isRuslan/vim-es6'
+" Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
+Plugin 'heavenshell/vim-jsdoc'
+" Plugin 'joegesualdo/jsdoc.vim'
 Plugin 'moll/vim-node'
 Plugin 'vim-scripts/tComment'
 Plugin 'airblade/vim-gitgutter'
@@ -23,8 +26,18 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'powerline/powerline'
-Plugin 'heavenshell/vim-jsdoc'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plugin 'Shougo/neocomplcache'
+Plugin 'posva/vim-vue'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 
@@ -44,6 +57,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_eslint_exe='./.eslintrc.json'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') !=# '' ? ['eslint'] : []
 
 syntax enable                     " Turn on syntax highlighting.
@@ -57,6 +71,8 @@ set shiftwidth=4
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType json setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 set t_RV=			  " pour supprimer les \x80\xFD5 dans vimgolf
 
@@ -147,5 +163,6 @@ highlight Pmenu ctermbg=238 gui=bold
 
 
 let g:buffergator_display_regime = "bufname"
-let g:buffergator_vsplit_size = 60
+let g:buffergator_vsplit_size = 80
 
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
