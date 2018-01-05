@@ -23,9 +23,6 @@ fi
 # path
 PATH=~/.rbenv/shims:$PATH:~/.bin
 
-# nvm use 6.9.1
-nvm use 8.9.0
-
-# nvm use 8.0.0
+nvm use 8.9.4
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
