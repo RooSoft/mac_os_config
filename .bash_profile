@@ -12,7 +12,7 @@ source "${GITAWAREPROMPT}/main.sh"
 export PS1="\[\e[0;36m\]\u\[\e[0m\] @ \[\e[0;36m\]\h\[\e[0m\] \[$txtblu\]\$git_branch\$git_dirty\[$txtrst\] \j \# \[\e[0;32m\]\t \[\e[0;33m\]\W\[\e[0;32m\] \$ \[\e[0m\]"
 export PS2="&gt; "
 
-export NVM_DIR="/Users/marclacoursiere/.nvm"
+export NVM_DIR="/Users/marc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # bash-completion (brew install bash-completion; brew tap homebrew/completions)
@@ -26,3 +26,4 @@ PATH=~/.rbenv/shims:$PATH:~/.bin
 nvm use 8.9.4
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
