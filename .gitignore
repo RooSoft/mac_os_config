@@ -1,3 +1,4 @@
 *.swp
 bundle
 .eslint.json
+configstore
